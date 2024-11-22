@@ -48,9 +48,11 @@ A RESTful API for managing plans, including functionality to create, update, del
    USE plans_db;
    ```
 
+
+
 3. **Create the `plans` Table**:
    ```sql
-  CREATE TABLE `plans` (
+   CREATE TABLE `plans` (
   `id` int NOT NULL AUTO_INCREMENT,
   `Category` varchar(45) DEFAULT NULL,
   `Created_by` varchar(120) DEFAULT NULL,
@@ -64,6 +66,7 @@ A RESTful API for managing plans, including functionality to create, update, del
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
    ```
+
 
 ---
 
