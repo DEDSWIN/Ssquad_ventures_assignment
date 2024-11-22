@@ -1,0 +1,1377 @@
+{
+	"info": {
+		"_postman_id": "c4b3bce4-c0b8-4c01-8957-5d72ce597c7a",
+		"name": "SSquad_Plan_microservice_apitests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39926824"
+	},
+	"item": [
+		{
+			"name": "add_plan",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Category\": \"Vacation\",\r\n    \"Created_by\": \"John Doe\",\r\n    \"Latitude\": 34.0522,\r\n    \"Longitude\": -118.2437,\r\n    \"Date\": \"2024-12-25\",\r\n    \"Time_created\": \"2024-11-22T15:45:00\",\r\n    \"People\": 4,\r\n    \"Status\": \"Planned\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/plans",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"plans"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "entry_1",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Category\": \"Games\",\r\n    \"Created_by\": \"pqtr@gmail.com\",\r\n    \"Latitude\": 14.0522,\r\n    \"Longitude\": -18.2437,\r\n    \"Date\": \"2024-12-25\",\r\n    \"Time_created\": \"2024-11-22T19:11:00\",\r\n    \"People\": 3,\r\n    \"Status\": \"Open\",\r\n    \"People_joined\": 0\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/plans",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"plans"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "827"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"33b-8VU5IAIFqCYz2899con8pwv0OrE\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 Nov 2024 13:55:18 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Plan created successfully\",\n    \"result\": {\n        \"_events\": {},\n        \"_eventsCount\": 0,\n        \"next\": null,\n        \"sql\": \"INSERT INTO plans (Category, Created_by, Latitude, Longitude, Date, Time_created, People, Status, People_joined) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);\",\n        \"values\": [\n            \"Games\",\n            \"pqtr@gmail.com\",\n            14.0522,\n            -18.2437,\n            \"2024-12-25\",\n            \"2024-11-22T19:11:00\",\n            3,\n            \"Open\",\n            0\n        ],\n        \"_queryOptions\": {\n            \"rowsAsArray\": false,\n            \"sql\": \"INSERT INTO plans (Category, Created_by, Latitude, Longitude, Date, Time_created, People, Status, People_joined) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);\",\n            \"values\": [\n                \"Games\",\n                \"pqtr@gmail.com\",\n                14.0522,\n                -18.2437,\n                \"2024-12-25\",\n                \"2024-11-22T19:11:00\",\n                3,\n                \"Open\",\n                0\n            ]\n        },\n        \"namedPlaceholders\": false,\n        \"queryTimeout\": null,\n        \"_fieldCount\": 0,\n        \"_rowParser\": null,\n        \"_fields\": [],\n        \"_rows\": [],\n        \"_receivedFieldsCount\": 0,\n        \"_resultIndex\": 0,\n        \"_localStream\": null,\n        \"_connection\": null\n    }\n}"
+				},
+				{
+					"name": "entry_2",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Category\": \"Restaurant\",\r\n    \"Created_by\": \"pqtr@gmail.com\",\r\n    \"Latitude\": 24.0522,\r\n    \"Longitude\": -28.2437,\r\n    \"Date\": \"2024-12-25\",\r\n    \"Time_created\": \"2024-11-22T19:30:00\",\r\n    \"People\": 7,\r\n    \"Status\": \"Open\",\r\n    \"People_joined\": 0\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/plans",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"plans"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "837"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"345-N5OZopJj4rgpSbPW6MCGUDzF+2c\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 Nov 2024 14:00:27 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Plan created successfully\",\n    \"result\": {\n        \"_events\": {},\n        \"_eventsCount\": 0,\n        \"next\": null,\n        \"sql\": \"INSERT INTO plans (Category, Created_by, Latitude, Longitude, Date, Time_created, People, Status, People_joined) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);\",\n        \"values\": [\n            \"Restaurant\",\n            \"pqtr@gmail.com\",\n            24.0522,\n            -28.2437,\n            \"2024-12-25\",\n            \"2024-11-22T19:30:00\",\n            7,\n            \"Open\",\n            0\n        ],\n        \"_queryOptions\": {\n            \"rowsAsArray\": false,\n            \"sql\": \"INSERT INTO plans (Category, Created_by, Latitude, Longitude, Date, Time_created, People, Status, People_joined) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);\",\n            \"values\": [\n                \"Restaurant\",\n                \"pqtr@gmail.com\",\n                24.0522,\n                -28.2437,\n                \"2024-12-25\",\n                \"2024-11-22T19:30:00\",\n                7,\n                \"Open\",\n                0\n            ]\n        },\n        \"namedPlaceholders\": false,\n        \"queryTimeout\": null,\n        \"_fieldCount\": 0,\n        \"_rowParser\": null,\n        \"_fields\": [],\n        \"_rows\": [],\n        \"_receivedFieldsCount\": 0,\n        \"_resultIndex\": 0,\n        \"_localStream\": null,\n        \"_connection\": null\n    }\n}"
+				},
+				{
+					"name": "entry3",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Category\": \"Vacation\",\r\n    \"Created_by\": \"abcd@gmail.com\",\r\n    \"Latitude\": 124.0523,\r\n    \"Longitude\": -128.2437,\r\n    \"Date\": \"2024-12-25\",\r\n    \"Time_created\": \"2024-11-22T19:30:00\",\r\n    \"People\": 10,\r\n    \"Status\": \"Open\",\r\n    \"People_joined\": 5\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/plans",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"plans"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "839"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"347-5lSbDn/AOozA8j6hILc1Noc369U\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 Nov 2024 14:02:04 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Plan created successfully\",\n    \"result\": {\n        \"_events\": {},\n        \"_eventsCount\": 0,\n        \"next\": null,\n        \"sql\": \"INSERT INTO plans (Category, Created_by, Latitude, Longitude, Date, Time_created, People, Status, People_joined) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);\",\n        \"values\": [\n            \"Vacation\",\n            \"abcd@gmail.com\",\n            124.0523,\n            -128.2437,\n            \"2024-12-25\",\n            \"2024-11-22T19:30:00\",\n            10,\n            \"Open\",\n            5\n        ],\n        \"_queryOptions\": {\n            \"rowsAsArray\": false,\n            \"sql\": \"INSERT INTO plans (Category, Created_by, Latitude, Longitude, Date, Time_created, People, Status, People_joined) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);\",\n            \"values\": [\n                \"Vacation\",\n                \"abcd@gmail.com\",\n                124.0523,\n                -128.2437,\n                \"2024-12-25\",\n                \"2024-11-22T19:30:00\",\n                10,\n                \"Open\",\n                5\n            ]\n        },\n        \"namedPlaceholders\": false,\n        \"queryTimeout\": null,\n        \"_fieldCount\": 0,\n        \"_rowParser\": null,\n        \"_fields\": [],\n        \"_rows\": [],\n        \"_receivedFieldsCount\": 0,\n        \"_resultIndex\": 0,\n        \"_localStream\": null,\n        \"_connection\": null\n    }\n}"
+				},
+				{
+					"name": "entry_4",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Category\": \"Business\",\r\n    \"Created_by\": \"abcd@gmail.com\",\r\n    \"Latitude\": 14.0523,\r\n    \"Longitude\": -12.2437,\r\n    \"Date\": \"2024-12-25\",\r\n    \"Time_created\": \"2024-11-22T19:45:00\",\r\n    \"People\": 15,\r\n    \"Status\": \"Open\",\r\n    \"People_joined\": 15\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/plans",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"plans"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "837"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"345-8B10htl2uQiar3UhsKi0zs0yrTM\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 Nov 2024 14:15:19 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Plan created successfully\",\n    \"result\": {\n        \"_events\": {},\n        \"_eventsCount\": 0,\n        \"next\": null,\n        \"sql\": \"INSERT INTO plans (Category, Created_by, Latitude, Longitude, Date, Time_created, People, Status, People_joined) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);\",\n        \"values\": [\n            \"Business\",\n            \"abcd@gmail.com\",\n            14.0523,\n            -12.2437,\n            \"2024-12-25\",\n            \"2024-11-22T19:45:00\",\n            15,\n            \"Open\",\n            15\n        ],\n        \"_queryOptions\": {\n            \"rowsAsArray\": false,\n            \"sql\": \"INSERT INTO plans (Category, Created_by, Latitude, Longitude, Date, Time_created, People, Status, People_joined) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);\",\n            \"values\": [\n                \"Business\",\n                \"abcd@gmail.com\",\n                14.0523,\n                -12.2437,\n                \"2024-12-25\",\n                \"2024-11-22T19:45:00\",\n                15,\n                \"Open\",\n                15\n            ]\n        },\n        \"namedPlaceholders\": false,\n        \"queryTimeout\": null,\n        \"_fieldCount\": 0,\n        \"_rowParser\": null,\n        \"_fields\": [],\n        \"_rows\": [],\n        \"_receivedFieldsCount\": 0,\n        \"_resultIndex\": 0,\n        \"_localStream\": null,\n        \"_connection\": null\n    }\n}"
+				},
+				{
+					"name": "entry_6",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Category\": \"Shopping\",\r\n    \"Created_by\": \"abcd@gmail.com\",\r\n    \"Latitude\": 144.0523,\r\n    \"Longitude\": -132.2437,\r\n    \"Date\": \"2024-12-25\",\r\n    \"Time_created\": \"2024-11-22T19:45:00\",\r\n    \"People\": 15,\r\n    \"Status\": \"Closed\",\r\n    \"People_joined\": 1\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/plans",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"plans"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "843"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"34b-78k191C84l5eXQr5G47sMlAGs5w\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 Nov 2024 14:16:44 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Plan created successfully\",\n    \"result\": {\n        \"_events\": {},\n        \"_eventsCount\": 0,\n        \"next\": null,\n        \"sql\": \"INSERT INTO plans (Category, Created_by, Latitude, Longitude, Date, Time_created, People, Status, People_joined) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);\",\n        \"values\": [\n            \"Shopping\",\n            \"abcd@gmail.com\",\n            144.0523,\n            -132.2437,\n            \"2024-12-25\",\n            \"2024-11-22T19:45:00\",\n            15,\n            \"Closed\",\n            1\n        ],\n        \"_queryOptions\": {\n            \"rowsAsArray\": false,\n            \"sql\": \"INSERT INTO plans (Category, Created_by, Latitude, Longitude, Date, Time_created, People, Status, People_joined) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);\",\n            \"values\": [\n                \"Shopping\",\n                \"abcd@gmail.com\",\n                144.0523,\n                -132.2437,\n                \"2024-12-25\",\n                \"2024-11-22T19:45:00\",\n                15,\n                \"Closed\",\n                1\n            ]\n        },\n        \"namedPlaceholders\": false,\n        \"queryTimeout\": null,\n        \"_fieldCount\": 0,\n        \"_rowParser\": null,\n        \"_fields\": [],\n        \"_rows\": [],\n        \"_receivedFieldsCount\": 0,\n        \"_resultIndex\": 0,\n        \"_localStream\": null,\n        \"_connection\": null\n    }\n}"
+				},
+				{
+					"name": "entry_7",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Category\": \"Park\",\r\n    \"Created_by\": \"abcd@gmail.com\",\r\n    \"Latitude\": 14.0523,\r\n    \"Longitude\": -12.2437,\r\n    \"Date\": \"2024-11-22\",\r\n    \"Time_created\": \"2024-11-22T19:45:00\",\r\n    \"People\": 15,\r\n    \"Status\": \"Open\",\r\n    \"People_joined\": 11\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/plans",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"plans"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "829"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"33d-M+c1bzPT55J3VWbqDIaIZ6hUnmA\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 Nov 2024 14:30:07 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Plan created successfully\",\n    \"result\": {\n        \"_events\": {},\n        \"_eventsCount\": 0,\n        \"next\": null,\n        \"sql\": \"INSERT INTO plans (Category, Created_by, Latitude, Longitude, Date, Time_created, People, Status, People_joined) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);\",\n        \"values\": [\n            \"Park\",\n            \"abcd@gmail.com\",\n            14.0523,\n            -12.2437,\n            \"2024-11-22\",\n            \"2024-11-22T19:45:00\",\n            15,\n            \"Open\",\n            11\n        ],\n        \"_queryOptions\": {\n            \"rowsAsArray\": false,\n            \"sql\": \"INSERT INTO plans (Category, Created_by, Latitude, Longitude, Date, Time_created, People, Status, People_joined) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);\",\n            \"values\": [\n                \"Park\",\n                \"abcd@gmail.com\",\n                14.0523,\n                -12.2437,\n                \"2024-11-22\",\n                \"2024-11-22T19:45:00\",\n                15,\n                \"Open\",\n                11\n            ]\n        },\n        \"namedPlaceholders\": false,\n        \"queryTimeout\": null,\n        \"_fieldCount\": 0,\n        \"_rowParser\": null,\n        \"_fields\": [],\n        \"_rows\": [],\n        \"_receivedFieldsCount\": 0,\n        \"_resultIndex\": 0,\n        \"_localStream\": null,\n        \"_connection\": null\n    }\n}"
+				},
+				{
+					"name": "entry_8",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Category\": \"Restaurant\",\r\n    \"Created_by\": \"abcd@gmail.com\",\r\n    \"Latitude\": 14.0523,\r\n    \"Longitude\": -12.2437,\r\n    \"Date\": \"2024-11-23\",\r\n    \"Time_created\": \"2024-11-22T19:45:00\",\r\n    \"People\": 15,\r\n    \"Status\": \"Open\",\r\n    \"People_joined\": 11\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/plans",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"plans"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "841"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"349-3eQqP85gKm0mPBaqQnTrReMGSNU\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 Nov 2024 14:43:09 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Plan created successfully\",\n    \"result\": {\n        \"_events\": {},\n        \"_eventsCount\": 0,\n        \"next\": null,\n        \"sql\": \"INSERT INTO plans (Category, Created_by, Latitude, Longitude, Date, Time_created, People, Status, People_joined) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);\",\n        \"values\": [\n            \"Restaurant\",\n            \"abcd@gmail.com\",\n            14.0523,\n            -12.2437,\n            \"2024-11-23\",\n            \"2024-11-22T19:45:00\",\n            15,\n            \"Open\",\n            11\n        ],\n        \"_queryOptions\": {\n            \"rowsAsArray\": false,\n            \"sql\": \"INSERT INTO plans (Category, Created_by, Latitude, Longitude, Date, Time_created, People, Status, People_joined) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);\",\n            \"values\": [\n                \"Restaurant\",\n                \"abcd@gmail.com\",\n                14.0523,\n                -12.2437,\n                \"2024-11-23\",\n                \"2024-11-22T19:45:00\",\n                15,\n                \"Open\",\n                11\n            ]\n        },\n        \"namedPlaceholders\": false,\n        \"queryTimeout\": null,\n        \"_fieldCount\": 0,\n        \"_rowParser\": null,\n        \"_fields\": [],\n        \"_rows\": [],\n        \"_receivedFieldsCount\": 0,\n        \"_resultIndex\": 0,\n        \"_localStream\": null,\n        \"_connection\": null\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Getting_filtered_plans",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/plans?latitude=144.05220&longitude=-132.243700&distance=50000&categories=Business,Games,Park,Shopping,Vacation,Restaurant&timeline=after&date=2024-12-01",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"plans"
+					],
+					"query": [
+						{
+							"key": "latitude",
+							"value": "144.05220"
+						},
+						{
+							"key": "longitude",
+							"value": "-132.243700"
+						},
+						{
+							"key": "distance",
+							"value": "50000"
+						},
+						{
+							"key": "categories",
+							"value": "Business,Games,Park,Shopping,Vacation,Restaurant"
+						},
+						{
+							"key": "timeline",
+							"value": "after"
+						},
+						{
+							"key": "date",
+							"value": "2024-12-01"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "filter_1",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/plans?latitude=14.05220&longitude=-18.243700&distance=50&categories=Vacation,Games&timeline=after&date=2024-12-01",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"plans"
+							],
+							"query": [
+								{
+									"key": "latitude",
+									"value": "14.05220"
+								},
+								{
+									"key": "longitude",
+									"value": "-18.243700"
+								},
+								{
+									"key": "distance",
+									"value": "50"
+								},
+								{
+									"key": "categories",
+									"value": "Vacation,Games"
+								},
+								{
+									"key": "timeline",
+									"value": "after"
+								},
+								{
+									"key": "date",
+									"value": "2024-12-01"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "228"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"e4-X7zi+fIVwQtT6p9lEXSdBGPvmME\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 Nov 2024 15:40:31 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 6,\n        \"Category\": \"Games\",\n        \"Created_by\": \"pqtr@gmail.com\",\n        \"Latitude\": \"14.052200\",\n        \"Longitude\": \"-18.243700\",\n        \"Date\": \"2024-12-24T18:30:00.000Z\",\n        \"Time_created\": \"2024-11-22T13:41:00.000Z\",\n        \"People\": 3,\n        \"Status\": \"Open\",\n        \"People_joined\": 0\n    }\n]"
+				},
+				{
+					"name": "filter_2",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/plans?latitude=14.05220&longitude=-18.243700&distance=5000&categories=&timeline=after&date=2024-12-01",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"plans"
+							],
+							"query": [
+								{
+									"key": "latitude",
+									"value": "14.05220"
+								},
+								{
+									"key": "longitude",
+									"value": "-18.243700"
+								},
+								{
+									"key": "distance",
+									"value": "5000"
+								},
+								{
+									"key": "categories",
+									"value": ""
+								},
+								{
+									"key": "timeline",
+									"value": "after"
+								},
+								{
+									"key": "date",
+									"value": "2024-12-01"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "461"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1cd-vd6Mp1Yz4fWbVqxjtS/EOtMsaF4\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 Nov 2024 15:46:53 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 6,\n        \"Category\": \"Games\",\n        \"Created_by\": \"pqtr@gmail.com\",\n        \"Latitude\": \"14.052200\",\n        \"Longitude\": \"-18.243700\",\n        \"Date\": \"2024-12-24T18:30:00.000Z\",\n        \"Time_created\": \"2024-11-22T13:41:00.000Z\",\n        \"People\": 3,\n        \"Status\": \"Open\",\n        \"People_joined\": 0\n    },\n    {\n        \"id\": 11,\n        \"Category\": \"Business\",\n        \"Created_by\": \"abcd@gmail.com\",\n        \"Latitude\": \"14.052300\",\n        \"Longitude\": \"-12.243700\",\n        \"Date\": \"2024-12-24T18:30:00.000Z\",\n        \"Time_created\": \"2024-11-22T14:15:00.000Z\",\n        \"People\": 15,\n        \"Status\": \"Open\",\n        \"People_joined\": 13\n    }\n]"
+				},
+				{
+					"name": "filter_3",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/plans?latitude=14.05220&longitude=-12.243700&distance=5000&categories=Business,Games,Park&timeline=before&date=2024-12-01",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"plans"
+							],
+							"query": [
+								{
+									"key": "latitude",
+									"value": "14.05220"
+								},
+								{
+									"key": "longitude",
+									"value": "-12.243700"
+								},
+								{
+									"key": "distance",
+									"value": "5000"
+								},
+								{
+									"key": "categories",
+									"value": "Business,Games,Park"
+								},
+								{
+									"key": "timeline",
+									"value": "before"
+								},
+								{
+									"key": "date",
+									"value": "2024-12-01"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "230"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"e6-Ot74Cg645d7NqCT9mhUF95Cl4IY\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 Nov 2024 15:51:49 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 14,\n        \"Category\": \"Park\",\n        \"Created_by\": \"abcd@gmail.com\",\n        \"Latitude\": \"14.052300\",\n        \"Longitude\": \"-12.243700\",\n        \"Date\": \"2024-11-21T18:30:00.000Z\",\n        \"Time_created\": \"2024-11-22T14:15:00.000Z\",\n        \"People\": 15,\n        \"Status\": \"Open\",\n        \"People_joined\": 11\n    }\n]"
+				},
+				{
+					"name": "filter_4",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/plans?latitude=14.05220&longitude=-12.243700&distance=5000&categories=Business,Games,Park&timeline=active&date=",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"plans"
+							],
+							"query": [
+								{
+									"key": "latitude",
+									"value": "14.05220"
+								},
+								{
+									"key": "longitude",
+									"value": "-12.243700"
+								},
+								{
+									"key": "distance",
+									"value": "5000"
+								},
+								{
+									"key": "categories",
+									"value": "Business,Games,Park"
+								},
+								{
+									"key": "timeline",
+									"value": "active"
+								},
+								{
+									"key": "date",
+									"value": ""
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "230"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"e6-Ot74Cg645d7NqCT9mhUF95Cl4IY\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 Nov 2024 16:43:24 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 14,\n        \"Category\": \"Park\",\n        \"Created_by\": \"abcd@gmail.com\",\n        \"Latitude\": \"14.052300\",\n        \"Longitude\": \"-12.243700\",\n        \"Date\": \"2024-11-21T18:30:00.000Z\",\n        \"Time_created\": \"2024-11-22T14:15:00.000Z\",\n        \"People\": 15,\n        \"Status\": \"Open\",\n        \"People_joined\": 11\n    }\n]"
+				},
+				{
+					"name": "filter_5",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/plans?latitude=144.05220&longitude=-132.243700&distance=5000&categories=Business,Games,Park,Shopping&timeline=active&date=",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"plans"
+							],
+							"query": [
+								{
+									"key": "latitude",
+									"value": "144.05220"
+								},
+								{
+									"key": "longitude",
+									"value": "-132.243700"
+								},
+								{
+									"key": "distance",
+									"value": "5000"
+								},
+								{
+									"key": "categories",
+									"value": "Business,Games,Park,Shopping"
+								},
+								{
+									"key": "timeline",
+									"value": "active"
+								},
+								{
+									"key": "date",
+									"value": ""
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2-l9Fw4VUO7kr8CvBlt4zaMCqXZ0w\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 Nov 2024 16:45:31 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[]"
+				},
+				{
+					"name": "filter_7",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/plans?latitude=144.05220&longitude=-132.243700&distance=50000&categories=Business,Games,Park,Shopping,Vacation,Restaurant&timeline=after&date=2024-12-01",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"plans"
+							],
+							"query": [
+								{
+									"key": "latitude",
+									"value": "144.05220"
+								},
+								{
+									"key": "longitude",
+									"value": "-132.243700"
+								},
+								{
+									"key": "distance",
+									"value": "50000"
+								},
+								{
+									"key": "categories",
+									"value": "Business,Games,Park,Shopping,Vacation,Restaurant"
+								},
+								{
+									"key": "timeline",
+									"value": "after"
+								},
+								{
+									"key": "date",
+									"value": "2024-12-01"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "926"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"39e-JDQdRApcSnrtc2xC8Rw4ppy0T2A\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 Nov 2024 16:51:45 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 6,\n        \"Category\": \"Games\",\n        \"Created_by\": \"pqtr@gmail.com\",\n        \"Latitude\": \"14.052200\",\n        \"Longitude\": \"-18.243700\",\n        \"Date\": \"2024-12-24T18:30:00.000Z\",\n        \"Time_created\": \"2024-11-22T13:41:00.000Z\",\n        \"People\": 3,\n        \"Status\": \"Open\",\n        \"People_joined\": 0\n    },\n    {\n        \"id\": 7,\n        \"Category\": \"Restaurant\",\n        \"Created_by\": \"pqtr@gmail.com\",\n        \"Latitude\": \"24.052200\",\n        \"Longitude\": \"-28.243700\",\n        \"Date\": \"2024-12-24T18:30:00.000Z\",\n        \"Time_created\": \"2024-11-22T14:00:00.000Z\",\n        \"People\": 7,\n        \"Status\": \"Open\",\n        \"People_joined\": 0\n    },\n    {\n        \"id\": 9,\n        \"Category\": \"Vacation\",\n        \"Created_by\": \"abcd@gmail.com\",\n        \"Latitude\": \"124.052300\",\n        \"Longitude\": \"-128.243700\",\n        \"Date\": \"2024-12-24T18:30:00.000Z\",\n        \"Time_created\": \"2024-11-22T14:00:00.000Z\",\n        \"People\": 10,\n        \"Status\": \"Open\",\n        \"People_joined\": 5\n    },\n    {\n        \"id\": 11,\n        \"Category\": \"Business\",\n        \"Created_by\": \"abcd@gmail.com\",\n        \"Latitude\": \"14.052300\",\n        \"Longitude\": \"-12.243700\",\n        \"Date\": \"2024-12-24T18:30:00.000Z\",\n        \"Time_created\": \"2024-11-22T14:15:00.000Z\",\n        \"People\": 15,\n        \"Status\": \"Open\",\n        \"People_joined\": 13\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Updating_Plans",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Category\": \"Shopping\",\r\n    \"Created_by\": \"abcd@gmail.com\",\r\n    \"Latitude\": 144.0523,\r\n    \"Longitude\": -132.2437,\r\n    \"Date\": \"2024-12-25\",\r\n    \"Time_created\": \"2024-11-22T19:45:00\",\r\n    \"People\": 15,\r\n    \"Status\": \"Open\",\r\n    \"People_joined\": 1\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/plans/133",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"plans",
+						"133"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "update1",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Category\": \"Games\",\r\n    \"Created_by\": \"pqtr@gmail.com\",\r\n    \"Latitude\": 14.0522,\r\n    \"Longitude\": -18.2437,\r\n    \"Date\": \"2024-12-25\",\r\n    \"Time_created\": \"2024-11-22T19:11:00\",\r\n    \"People\": 3,\r\n    \"Status\": \"Open\",\r\n    \"People_joined\": 1\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/plans/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"plans",
+								"6"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "205"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"cd-KU/mjEpSk38BvT73j8wsSzxfYkI\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 Nov 2024 17:05:15 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Plan updated successfully\",\n    \"message_from_db\": {\n        \"fieldCount\": 0,\n        \"affectedRows\": 1,\n        \"insertId\": 0,\n        \"info\": \"Rows matched: 1  Changed: 1  Warnings: 0\",\n        \"serverStatus\": 2,\n        \"warningStatus\": 0,\n        \"changedRows\": 1\n    }\n}"
+				},
+				{
+					"name": "update_2",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Category\": \"Shopping\",\r\n    \"Created_by\": \"abcd@gmail.com\",\r\n    \"Latitude\": 144.0523,\r\n    \"Longitude\": -132.2437,\r\n    \"Date\": \"2024-12-25\",\r\n    \"Time_created\": \"2024-11-22T19:45:00\",\r\n    \"People\": 15,\r\n    \"Status\": \"Open\",\r\n    \"People_joined\": 1\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/plans/13",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"plans",
+								"13"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "205"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"cd-KU/mjEpSk38BvT73j8wsSzxfYkI\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 Nov 2024 17:09:19 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Plan updated successfully\",\n    \"message_from_db\": {\n        \"fieldCount\": 0,\n        \"affectedRows\": 1,\n        \"insertId\": 0,\n        \"info\": \"Rows matched: 1  Changed: 1  Warnings: 0\",\n        \"serverStatus\": 2,\n        \"warningStatus\": 0,\n        \"changedRows\": 1\n    }\n}"
+				},
+				{
+					"name": "update_3",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Category\": \"Shopping\",\r\n    \"Created_by\": \"abcd@gmail.com\",\r\n    \"Latitude\": 144.0523,\r\n    \"Longitude\": -132.2437,\r\n    \"Date\": \"2024-12-25\",\r\n    \"Time_created\": \"2024-11-22T19:45:00\",\r\n    \"People\": 15,\r\n    \"Status\": \"Open\",\r\n    \"People_joined\": 1\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/plans/133",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"plans",
+								"133"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "47"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2f-PCA0LueyrJvlRqn5OmuMgb1oe1k\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 Nov 2024 17:15:43 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Plan not found or no changes made\"\n}"
+				}
+			]
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "delete_1",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/plans/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"plans",
+								"8"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "28"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1c-/74nNAUkm+noUd8FdOBTy/B3PtY\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 Nov 2024 17:19:57 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Plan not found\"\n}"
+				},
+				{
+					"name": "delete_2",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/plans/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"plans",
+								"7"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "165"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"a5-PjzqovrabND/vUhwrj5cswbUah0\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 Nov 2024 17:20:12 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Plan deleted successfully\",\n    \"message_from_db\": {\n        \"fieldCount\": 0,\n        \"affectedRows\": 1,\n        \"insertId\": 0,\n        \"info\": \"\",\n        \"serverStatus\": 2,\n        \"warningStatus\": 0,\n        \"changedRows\": 0\n    }\n}"
+				}
+			]
+		}
+	]
+}

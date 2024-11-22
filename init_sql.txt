@@ -1,0 +1,13 @@
+CREATE TABLE `plans` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `Category` varchar(45) DEFAULT NULL,
+  `Created_by` varchar(120) DEFAULT NULL,
+  `Latitude` decimal(10,6) DEFAULT NULL,
+  `Longitude` decimal(10,6) DEFAULT NULL,
+  `Date` date DEFAULT NULL,
+  `Time_created` datetime DEFAULT NULL,
+  `People` int DEFAULT NULL,
+  `Status` varchar(45) DEFAULT NULL,
+  `People_joined` int DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
